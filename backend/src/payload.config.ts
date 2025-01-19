@@ -14,6 +14,13 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
+  serverURL: 'http://localhost:3000',
+  cors: [
+    'http://localhost:4000', 
+  ],
+  csrf: [
+    'http://localhost:4000', 
+  ],
   admin: {
     user: Users.slug,
     importMap: {
@@ -37,4 +44,5 @@ export default buildConfig({
       token: process.env.BLOB_READ_WRITE_TOKEN || '',
     }),
   ],
+  
 })

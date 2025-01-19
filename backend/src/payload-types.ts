@@ -120,7 +120,7 @@ export interface Post {
     [k: string]: unknown;
   };
   coverImage: string | Media;
-  publishedAt: string;
+  publishedAt?: string | null;
   author: string | Author;
   updatedAt: string;
   createdAt: string;
@@ -133,7 +133,7 @@ export interface Author {
   id: string;
   name: string;
   bio?: string | null;
-  profilePicture?: (string | null) | Media;
+  profilePicture: string | Media;
   updatedAt: string;
   createdAt: string;
 }

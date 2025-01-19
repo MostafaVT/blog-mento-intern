@@ -56,5 +56,76 @@ export const posts = [
       bio: 'John is a senior frontend developer with 5 years of experience in React and related technologies. He loves sharing his knowledge and helping others learn web development.'
     }
   };
+
+// {
+// "id": "678c22bcd632af6bc9ca9987",
+// "title": "first",
+
+// "body": {
+
+// "root": {
+
+// "children": [
+
+// {
+
+// "children": [
+
+// {
+// "detail": 0,
+// "format": 0,
+// "mode": "normal",
+// "style": "",
+// "text": "Rich body",
+// "type": "text",
+// "version": 1
+// }
+// ],
+// "direction": "ltr",
+// "format": "",
+// "indent": 0,
+// "type": "paragraph",
+// "version": 1,
+// "textFormat": 0,
+// "textStyle": ""
+// }
+// ],
+// "direction": "ltr",
+// "format": "",
+// "indent": 0,
+// "type": "root",
+// "version": 1
+// }
+// },
+
+// "coverImage": {
+// "id": "678c2250d632af6bc9ca992d",
+// "alt": "icon",
+// "filename": "defualt-user-icon-1.png",
+// "mimeType": "image/png",
+// "filesize": 5379,
+// "width": 626,
+// "height": 626,
+// "focalX": 50,
+// "focalY": 50,
+// "createdAt": "2025-01-18T21:51:12.492Z",
+// "updatedAt": "2025-01-18T21:51:12.492Z",
+// "url": "http://localhost:3000/api/media/file/defualt-user-icon-1.png",
+// "thumbnailURL": null
+// },
+// "publishedAt": "2025-01-18T21:53:00.024Z",
+
+// "author": {
+// "id": "678c22a9d632af6bc9ca9972",
+// "name": "Mostafa Ahmed",
+// "bio": "admin",
+// "profilePicture": "678c22a2d632af6bc9ca995e",
+// "createdAt": "2025-01-18T21:52:41.786Z",
+// "updatedAt": "2025-01-18T21:52:41.786Z"
+// },
+// "createdAt": "2025-01-18T21:53:00.026Z",
+// "updatedAt": "2025-01-18T21:53:00.026Z"
+// }
+
   
   

@@ -25,6 +25,8 @@ export const Authors: CollectionConfig = {
       label: 'Profile picture',
       relationTo: 'media',
       type: 'upload',
+      required: true,
+      // defaultValue: 'backend/media/defualt-user-icon.png',
     },
   ],
 }

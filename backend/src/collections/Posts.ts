@@ -32,7 +32,16 @@ export const Posts: CollectionConfig = {
       name: 'publishedAt',
       label: 'Published At',
       type: 'date',
-      required: true,
+      hooks: {
+        beforeChange: [
+          ({ value, originalDoc }) => {
+            if (!value) {
+              return new Date().toISOString();
+            }
+            return value;
+          },
+        ],
+      },
     },
     {
       name: 'author',

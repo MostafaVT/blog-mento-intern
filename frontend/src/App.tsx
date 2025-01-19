@@ -1,16 +1,34 @@
-import Box from "@mui/material/Box";
-import Slider from "@mui/material/Slider";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
+import Home from "@/pages/Home";
+import Posts from "@/pages/Posts";
+import Authors from "@/pages/Authors";
+import PostDetails from "@/pages/PostDetails";
 
 export default function App() {
   return (
-    <Box sx={{ width: 300 }}>
-      <Slider
-        size="small"
-        defaultValue={70}
-        aria-label="Small"
-        valueLabelDisplay="auto"
-      />
-      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
-    </Box>
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/posts">Posts</Link>
+          </li>
+          <li>
+            <Link to="/authors">Authors</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="*" element={<div>Not Found</div>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/authors" element={<Authors />} />
+        <Route path="/postdetails" element={<PostDetails />} />
+      </Routes>
+    </Router>
   );
 }
