@@ -6,17 +6,21 @@ BLOG/MENTO
 ### Motivation
 The motivation behind this project is to create a comprehensive blogging platform that allows users to share their thoughts, manage content, and interact with other users seamlessly.
 
+### Screenshot
+![imgrep.png]()
+
+
 ### Code Style
-The code style follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) with some custom rules to maintain consistency and readability throughout the project.
+The code style follows rules to maintain consistency, readability and scalability throughout the project.
 
 ### Tech/Framework Used
+- [Payload CMS](https://payloadcms.com/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [React](https://reactjs.org/)
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [Axios](https://axios-http.com/)
-- [Payload CMS](https://payloadcms.com/)
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com/)
 
@@ -36,24 +40,38 @@ To install the project, follow these steps:
 1. **Clone the Repository**
     ```bash
     git clone https://github.com/YOUR_USERNAME/blog-mento-intern.git
-    cd blog-mento-intern
     ```
 
 2. **Install Dependencies**
     ```bash
+    cd blog-mento-intern
+    npm install
+    cd backend
+    npm install
+    cd ../frontend
     npm install
     ```
 
 3. **Set Up Environment Variables**
-    Create a `.env` file in the root directory and add the necessary environment variables:
+    Create a `.env` file in the backend directory and add the necessary environment variables:
     ```env
-    PAYLOAD_SECRET=your_payload_secret
     MONGODB_URI=your_mongodb_uri
+    PAYLOAD_SECRET=your_payload_secret
+    PORT=3000
+    BLOB_READ_WRITE_TOKEN=your_read_write_token
+    PAYLOAD_PUBLIC_FRONTEND_URL=http://localhost:4000
+    ```
+
+    Create a `.env` file in the frontend directory and add the necessary environment variables:
+    ```env
+    PORT=4000
+    REACT_APP_API_URL=http://localhost:3000
     ```
 
 4. **Run the Development Server**
     ```bash
-    npm run dev
+    cd blog-mento-intern
+    npm start
     ```
 
 ### How to Use
@@ -63,13 +81,14 @@ To use the blog-mento-intern project, follow these steps:
     - Make sure you have the necessary dependencies installed (see Installation section).
     - Start the development server using the following command:
       ```bash
-      npm run dev
+        cd blog-mento-intern
+        npm start
       ```
 
 2. **Access the Application**
     - Open your browser and navigate to the local server URL, typically:
       ```bash
-      http://localhost:4000
+      http://localhost:4000/posts
       ```
 
 3. **Explore the Features**
