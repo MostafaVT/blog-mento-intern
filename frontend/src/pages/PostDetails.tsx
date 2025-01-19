@@ -11,7 +11,8 @@ const PostDetails = () => {
   return (
     <Box>
       <Typography variant="h4" gutterBottom>
-        Post Details -{post.title} - {post.author.name}
+        Post Details - title: {post.title} - by: {post.author.name} - bio:{" "}
+        {post.author.bio}
       </Typography>
       <PayloadRichTextRender data={post.body} />
     </Box>

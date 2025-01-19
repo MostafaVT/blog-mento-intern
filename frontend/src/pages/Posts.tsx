@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Box, Typography } from "@mui/material";
-import Button from "@mui/material/Button";
+import { experimentalStyled as styled } from "@mui/material/styles";
+import { Box, Typography, Button, Paper } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
 import PostCard from "@/components/ui/PostCard";
 
@@ -19,12 +20,21 @@ interface Post {
   };
 }
 
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+  ...theme.applyStyles("dark", {
+    backgroundColor: "#1A2027",
+  }),
+}));
+
 const Posts = () => {
   const navigate = useNavigate();
 
-  const handleDetailsClick = (
-    post: any,
-  ) => {
+  const handleDetailsClick = (post: any) => {
     navigate(`/postdetails`, { state: { post } });
   };
 
@@ -45,23 +55,32 @@ const Posts = () => {
   }, []);
 
   return (
-    <Box>
+    <>
       <Typography variant="h4" gutterBottom>
         Posts
       </Typography>
-      {posts.map((post) => (
-        <Box key={post.id} sx={{ marginBottom: 2 }}>
-          <PostCard post={post} />
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => handleDetailsClick(post)}
-          >
-            Details
-          </Button>
-        </Box>
-      ))}
-    </Box>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+        >
+          {posts.map((post) => (
+            <Item key={post.id}>
+              <PostCard post={post} />
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => handleDetailsClick(post)}
+                sx={{ marginTop: 1 }}
+              >
+                Details
+              </Button>
+            </Item>
+          ))}
+        </Grid>
+      </Box>
+    </>
   );
 };
 
