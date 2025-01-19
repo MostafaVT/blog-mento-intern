@@ -6,8 +6,10 @@ BLOG/MENTO
 ### Motivation
 The motivation behind this project is to create a comprehensive blogging platform that allows users to share their thoughts, manage content, and interact with other users seamlessly.
 
-### Screenshot
-![imgrep.png]()
+### Screenshots
+![imgrep.png](https://github.com/MostafaVT/blog-mento-intern/blob/main/frontend/public/imgrep.png)
+![imgrepd.png](https://github.com/MostafaVT/blog-mento-intern/blob/main/frontend/public/imgrepd.png)
+![imgrepa.png](https://github.com/MostafaVT/blog-mento-intern/blob/main/frontend/public/imgrepa.png)
 
 
 ### Code Style
